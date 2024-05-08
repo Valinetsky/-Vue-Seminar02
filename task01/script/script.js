@@ -334,7 +334,8 @@ Vue.component("product06", {
   </div>
       `,
 });
-Vue.component("article_and_news", {
+Vue.component("main_article_and_news", {
+  props: ["counter"],
   template: `
   <section class="blog center">
   <h2 class="blog__title">Articles & News</h2>
@@ -351,6 +352,28 @@ Vue.component("article_and_news", {
 </section>
         `,
 });
+Vue.component("blog_article_and_news", {
+  props: ["counter"],
+  template: `
+    <section class="blog center">
+    <h2 class="blog__title">Articles & News</h2>
+    <p class="blog__text">
+      It is a long established fact that a reader will be distracted by the of
+      readable content of a page when lookings at its layouts the points of
+      using.
+    </p>
+    <div class="blog__items">
+      <product01></product01>
+      <product02></product02>
+      <product03></product03>
+      <product04></product04>
+      <product05></product05>
+      <product06></product06>
+    </div>
+  </section>
+          `,
+});
+
 new Vue({
   el: "#app1",
   components: {

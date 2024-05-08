@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interior Design Website</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:ital,wght@0,400;0,500;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="app1">
+      <page-header></page-header>
+    </div>
+    <section class="banner center">
+      <div class="banner__intro">
+        <h1 class="banner__intro-title">Articles & News</h1>
+        <p class="banner__intro-text">Home / Blog</p>
+      </div>
+    </section>
+    <section class="latest-post center">
+      <h2 class="latest-post__title">Latest Post</h2>
+      <div class="latest-post__wrap">
+        <img
+          src="img/blog_latest.jpg"
+          alt="blog_latest"
+          class="latest-post__img"
+        />
+        <div class="latest-post__content">
+          <h3 class="latest-post__content-title">
+            Low Cost Latest Invented Interior Designing Ideas
+          </h3>
+          <p class="latest-post__content-text">
+            Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis
+            dignissim maximus.posuere in.Contrary to popular belief.
+          </p>
+          <p class="latest-post__content-text">
+            Lorem Ipsum is not simply random text. It has roots in a piece of
+            classica.
+          </p>
+          <div class="latest-post__content-wrap">
+            <p class="latest-post__content-data">26 December, 2022</p>
+            <div class="blog__img">
+              <img src="img/arrowSimple.svg" alt="row_left_blog" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="app2">
+      <blog_article_and_news></blog_article_and_news>
+    </div>
+
+    <div id="app3">
+      <page-footer></page-footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="script/script.js"></script>
+  </body>
+</html>
