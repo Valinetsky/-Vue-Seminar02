@@ -3,21 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reverse button (task02)</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <title>Task02</title>
   </head>
+
   <body>
-    <body>
-        <div class="root">
-           <button v-on:click="reverseMessage">{{nameButton}}</button>
-     
-           <ol>
-              <li v-for="(item, index) in lists" v-on:click="remove(index)">{{item}}</li>
-           </ol>
-           <button v-on:click="addListElement">Добавить</button>
-     
-        </div>
-        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-        <script src="script.js"></script>
+    <div class="content">
+      <button @click="sorted">Отсортировать: {{sortedText}}</button>
+      <div v-for="product in sortedProduct" class="products">
+        <h2>{{product.productName}}</h2>
+        <p>{{product.productPrice}}</p>
+      </div>
+      <hr />
+      <p>{{footerString}}</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

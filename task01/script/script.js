@@ -5,9 +5,9 @@ Vue.component("page-header", {
     <p class="logo__text">Interno</p>
   </div>
   <div class="header__menu">
-    <a class="header__link" href="#">Home</a>
+    <a class="header__link" href="index.html">Home</a>
     <a class="header__link" href="#">Project</a>
-    <a class="header__link" href="#">Blog</a>
+    <a class="header__link" href="blog.html">Blog</a>
   </div>
   </header>`,
 });
@@ -185,12 +185,6 @@ Vue.component("page-footer", {
 </footer>`,
 });
 Vue.component("product01", {
-  props: {
-    // counter: {
-    //   type: In,
-    //   required: true,
-    // },
-  },
   template: `
 <div class="blog__item">
   <div class="blog__item-image">
@@ -210,12 +204,6 @@ Vue.component("product01", {
     `,
 });
 Vue.component("product02", {
-  props: {
-    // counter: {
-    //   type: In,
-    //   required: true,
-    // },
-  },
   template: `
 <div class="blog__item blog__item-select">
   <div class="blog__item-image">
@@ -235,23 +223,17 @@ Vue.component("product02", {
       `,
 });
 Vue.component("product03", {
-  props: {
-    // counter: {
-    //   type: In,
-    //   required: true,
-    // },
-  },
   template: `
   <div class="blog__item">
     <div class="blog__item-image">
       <img src="img/news_image03.jpg" alt="news_image03" />
-      <p class="blog__img-text">Kitchan Design</p>
+      <p class="blog__img-text">Interior Design</p>
     </div>
     <h2 class="blog__item-title">
-      Let’s Get Solution For Building Construction Work
+        Best For Any Office & Business Interior Solution
     </h2>
     <div class="blog__wrap-text">
-      <p class="blog__item-text">26 December,2022</p>
+      <p class="blog__item-text">25 December,2022</p>
       <div class="blog__img">
         <img src="img/arrowSimple.svg" alt="row_left_blog" />
       </div>
@@ -260,12 +242,6 @@ Vue.component("product03", {
       `,
 });
 Vue.component("product04", {
-  props: {
-    // counter: {
-    //   type: In,
-    //   required: true,
-    // },
-  },
   template: `
   <div class="blog__item">
     <div class="blog__item-image">
@@ -285,23 +261,17 @@ Vue.component("product04", {
       `,
 });
 Vue.component("product05", {
-  props: {
-    // counter: {
-    //   type: In,
-    //   required: true,
-    // },
-  },
   template: `
   <div class="blog__item">
     <div class="blog__item-image">
       <img src="img/news_image05.jpg" alt="news_image05" />
-      <p class="blog__img-text">Kitchan Design</p>
+      <p class="blog__img-text">Living Design</p>
     </div>
     <h2 class="blog__item-title">
-      Let’s Get Solution For Building Construction Work
+        Low Cost Latest Invented Interior Designing Ideas.
     </h2>
     <div class="blog__wrap-text">
-      <p class="blog__item-text">26 December,2022</p>
+      <p class="blog__item-text">22 December,2022</p>
       <div class="blog__img">
         <img src="img/arrowSimple.svg" alt="row_left_blog" />
       </div>
@@ -310,23 +280,17 @@ Vue.component("product05", {
       `,
 });
 Vue.component("product06", {
-  props: {
-    // counter: {
-    //   type: In,
-    //   required: true,
-    // },
-  },
   template: `
   <div class="blog__item">
     <div class="blog__item-image">
       <img src="img/news_image06.jpg" alt="news_image06" />
-      <p class="blog__img-text">Kitchan Design</p>
+      <p class="blog__img-text">Interior Design</p>
     </div>
     <h2 class="blog__item-title">
-      Let’s Get Solution For Building Construction Work
+        Best For Any Office & Business Interior Solution
     </h2>
     <div class="blog__wrap-text">
-      <p class="blog__item-text">26 December,2022</p>
+      <p class="blog__item-text">25 December,2022</p>
       <div class="blog__img">
         <img src="img/arrowSimple.svg" alt="row_left_blog" />
       </div>
