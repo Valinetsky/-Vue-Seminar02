@@ -1,0 +1,12 @@
+ol {
+    cursor: pointer;
+}
+li {
+    margin: 5px 0;
+    border: 1px solid gray;
+    padding: 5px;
+    border-radius: 5px;
+}
+li:hover {
+    background: goldenrod;
+}
