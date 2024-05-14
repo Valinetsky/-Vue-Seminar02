@@ -1,5 +1,53 @@
+const globalCardsData = {
+    cards: [
+        {
+            id: 1,
+            image: "./img/news_image01.jpg",
+            design: "Kitchan Design",
+            heading: "Let’s Get Solution For Building Construction Work",
+            timing: "26 December,2022",
+        },
+        {
+            id: 2,
+            image: "img/news_image02.jpg",
+            design: "Living Design",
+            heading: "Low Cost Latest Invented Interior Designing Ideas.",
+            timing: "22 December,2022",
+        },
+        {
+            id: 3,
+            image: "img/news_image03.jpg",
+            design: "Interior Design",
+            heading: "Best For Any Office & Business Interior Solution",
+            timing: "25 December,2022",
+        },
+        {
+            id: 4,
+            image: "img/news_image04.jpg",
+            design: "Kitchan Design",
+            heading: "Let’s Get Solution For Building Construction Work",
+            timing: "26 December,2022",
+        },
+        {
+            id: 5,
+            image: "img/news_image05.jpg",
+            design: "Living Design",
+            heading: "Low Cost Latest Invented Interior Designing Ideas.",
+            timing: "22 December,2022",
+        },
+        {
+            id: 6,
+            image: "img/news_image06.jpg",
+            design: "Interior Design",
+            heading: "Best For Any Office & Business Interior Solution",
+            timing: "25 December,2022",
+        },
+    ],
+};
+
 Vue.component("page-header", {
-  template: `<header class="header center">
+    template: `
+<header class="header center">
   <div class="header__logo">
     <img src="img/Logo.svg" alt="logo" />
     <p class="logo__text">Interno</p>
@@ -9,11 +57,11 @@ Vue.component("page-header", {
     <a class="header__link" href="#">Project</a>
     <a class="header__link" href="blog.html">Blog</a>
   </div>
-  </header>`,
+</header>`,
 });
 var main__banner = {
-  template: `
-  <section class="baner center">
+    template: `
+<section class="baner center">
   <div class="baner__wrap">
     <div class="baner__wrap-content">
       <h1 class="baner__title">Let Your Home Be Unique</h1>
@@ -32,8 +80,8 @@ var main__banner = {
 </section>`,
 };
 var main__project = {
-  template: `
-    <section class="project center">
+    template: `
+  <section class="project center">
     <h2 class="project__title">Follow Our Projects</h2>
     <p class="project__text">
       It is a long established fact that a reader will be distracted by the of
@@ -105,8 +153,8 @@ var main__project = {
     `,
 };
 var main__counter = {
-  template: `
-    <section class="counter center">
+    template: `
+  <section class="counter center">
     <div class="counter__wrap">
       <div class="counter__item">
         <h2 class="counter__item-title">12</h2>
@@ -129,8 +177,8 @@ var main__counter = {
     `,
 };
 Vue.component("page-footer", {
-  template: `    
-  <footer class="footer center">
+    template: `    
+<footer class="footer center">
   <div class="footer__logo">
     <div class="header__logo">
       <img src="img/Logo.svg" alt="logo" />
@@ -184,56 +232,20 @@ Vue.component("page-footer", {
   </div>
 </footer>`,
 });
-Vue.component("product01", {
-  template: `
-<div class="blog__item">
-  <div class="blog__item-image">
-    <img src="img/news_image01.jpg" alt="news_image01" />
-    <p class="blog__img-text">Kitchan Design</p>
-  </div>
-  <h2 class="blog__item-title">
-    Let’s Get Solution For Building Construction Work
-  </h2>
-  <div class="blog__wrap-text">
-    <p class="blog__item-text">26 December,2022</p>
-    <div class="blog__img">
-      <img src="img/arrowSimple.svg" alt="row_left_blog" />
-    </div>
-  </div>
-</div>
-    `,
-});
-Vue.component("product02", {
-  template: `
-<div class="blog__item blog__item-select">
-  <div class="blog__item-image">
-    <img src="img/news_image02.jpg" alt="news_image02" />
-    <p class="blog__img-text">Living Design</p>
-  </div>
-  <h2 class="blog__item-title">
-    Low Cost Latest Invented Interior Designing Ideas.
-  </h2>
-  <div class="blog__wrap-text">
-    <p class="blog__item-text">22 December,2022</p>
-    <div class="blog__img blog__img_center">
-      <img src="img/arrowSimple.svg" alt="row_left_blog" />
-    </div>
-  </div>
-</div>
-      `,
-});
-Vue.component("product03", {
-  template: `
+
+Vue.component("product", {
+    props: ["image", "design", "heading", "timing"],
+    template: `
   <div class="blog__item">
     <div class="blog__item-image">
-      <img src="img/news_image03.jpg" alt="news_image03" />
-      <p class="blog__img-text">Interior Design</p>
+      <img :src="image" :alt="image" />
+      <p class="blog__img-text">{{design}}</p>
     </div>
     <h2 class="blog__item-title">
-        Best For Any Office & Business Interior Solution
+        {{heading}}
     </h2>
     <div class="blog__wrap-text">
-      <p class="blog__item-text">25 December,2022</p>
+      <p class="blog__item-text">{{timing}}</p>
       <div class="blog__img">
         <img src="img/arrowSimple.svg" alt="row_left_blog" />
       </div>
@@ -241,67 +253,14 @@ Vue.component("product03", {
   </div>
       `,
 });
-Vue.component("product04", {
-  template: `
-  <div class="blog__item">
-    <div class="blog__item-image">
-      <img src="img/news_image04.jpg" alt="news_image04" />
-      <p class="blog__img-text">Kitchan Design</p>
-    </div>
-    <h2 class="blog__item-title">
-      Let’s Get Solution For Building Construction Work
-    </h2>
-    <div class="blog__wrap-text">
-      <p class="blog__item-text">26 December,2022</p>
-      <div class="blog__img">
-        <img src="img/arrowSimple.svg" alt="row_left_blog" />
-      </div>
-    </div>
-  </div>
-      `,
-});
-Vue.component("product05", {
-  template: `
-  <div class="blog__item">
-    <div class="blog__item-image">
-      <img src="img/news_image05.jpg" alt="news_image05" />
-      <p class="blog__img-text">Living Design</p>
-    </div>
-    <h2 class="blog__item-title">
-        Low Cost Latest Invented Interior Designing Ideas.
-    </h2>
-    <div class="blog__wrap-text">
-      <p class="blog__item-text">22 December,2022</p>
-      <div class="blog__img">
-        <img src="img/arrowSimple.svg" alt="row_left_blog" />
-      </div>
-    </div>
-  </div>
-      `,
-});
-Vue.component("product06", {
-  template: `
-  <div class="blog__item">
-    <div class="blog__item-image">
-      <img src="img/news_image06.jpg" alt="news_image06" />
-      <p class="blog__img-text">Interior Design</p>
-    </div>
-    <h2 class="blog__item-title">
-        Best For Any Office & Business Interior Solution
-    </h2>
-    <div class="blog__wrap-text">
-      <p class="blog__item-text">25 December,2022</p>
-      <div class="blog__img">
-        <img src="img/arrowSimple.svg" alt="row_left_blog" />
-      </div>
-    </div>
-  </div>
-      `,
-});
+
 Vue.component("main_article_and_news", {
-  props: ["counter"],
-  template: `
-  <section class="blog center">
+    data() {
+        return globalCardsData;
+    },
+    props: ["counter"],
+    template: `
+<section class="blog center">
   <h2 class="blog__title">Articles & News</h2>
   <p class="blog__text">
     It is a long established fact that a reader will be distracted by the of
@@ -309,46 +268,44 @@ Vue.component("main_article_and_news", {
     using.
   </p>
   <div class="blog__items">
-    <product01></product01>
-    <product02></product02>
-    <product03></product03>
+      <product v-for="(card, index) in cards.slice(0, 3)" :key="card.id" :image="card.image" :design="card.design" :heading="card.heading" :timing="card.timing" :class="{ 'blog__item-select': index === 1 }"></product>
+
   </div>
 </section>
         `,
 });
+
 Vue.component("blog_article_and_news", {
-  props: ["counter"],
-  template: `
-    <section class="blog center">
-    <h2 class="blog__title">Articles & News</h2>
-    <p class="blog__text">
-      It is a long established fact that a reader will be distracted by the of
-      readable content of a page when lookings at its layouts the points of
-      using.
-    </p>
-    <div class="blog__items">
-      <product01></product01>
-      <product02></product02>
-      <product03></product03>
-      <product04></product04>
-      <product05></product05>
-      <product06></product06>
-    </div>
-  </section>
+    data() {
+        return globalCardsData;
+    },
+    props: ["counter"],
+    template: `
+<section class="blog center">
+  <h2 class="blog__title">Articles & News</h2>
+  <p class="blog__text">
+    It is a long established fact that a reader will be distracted by the of
+    readable content of a page when lookings at its layouts the points of
+    using.
+  </p>
+  <div class="blog__items" >
+    <product v-for="(card, index) in cards" :key="card.id" :image="card.image" :design="card.design" :heading="card.heading" :timing="card.timing" :class="{ 'blog__item-select': index === 1 }"></product>
+  </div>
+</section>
           `,
 });
 
 new Vue({
-  el: "#app1",
-  components: {
-    main__banner: main__banner,
-    main__project: main__project,
-    main__counter: main__counter,
-  },
+    el: "#app1",
+    components: {
+        main__banner: main__banner,
+        main__project: main__project,
+        main__counter: main__counter,
+    },
 });
 new Vue({
-  el: "#app2",
+    el: "#app2",
 });
 new Vue({
-  el: "#app3",
+    el: "#app3",
 });
